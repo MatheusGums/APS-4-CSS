@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e fundo geral */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    color: #333;
+    padding: 20px;
+}
+
+/* Container principal */
+#cabeçalho {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Nome principal */
+#cabeçalho h1:first-child {
+    text-align: center;
+    font-size: 32px;
+    color: #2c2c54;
+    margin-bottom: 10px;
+}
+
+/* Informações básicas */
+#cabeçalho > h3 {
+    text-align: center;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Botões (GitHub e Email) */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    background: #2c2c54;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    white-space: nowrap; 
+}
+
+nav ul li a:hover {
+    background: #40407a;
+}
+
+/* Títulos das seções */
+#cabeçalho h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #2c2c54;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Conteúdo */
+p {
+    margin-bottom: 15px;
+}
+
+/* Texto dos conteúdos */
+p h3 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Listas de habilidades */
+#cabeçalho h3 {
+    margin-left: 10px;
+}
+
+/* Efeito hover leve nas habilidades */
+#cabeçalho h3:hover {
+    color: #2c2c54;
+    transition: 0.2s;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #cabeçalho {
+        padding: 20px;
+    }
+
+    #cabeçalho h1:first-child {
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
