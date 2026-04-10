@@ -1,124 +1,200 @@
-/* Reset básico */
-* {
+/* Coiso ruim desgraça */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fonte e fundo geral */
+
+:root {
+    --cor-fundo: #1a1a2e;
+    --cor-card: #ffffff;
+    --cor-primaria: #2c2c54;
+    --cor-destaque: #7c6fcd;
+    --cor-texto: #333333;
+    --cor-suave: #666666;
+    --cor-borda: #e8e6f0;
+    --fonte-titulo: 'DM Serif Display', serif;
+    --fonte-corpo: 'DM Sans', sans-serif;
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
-    color: #333;
-    padding: 20px;
+    font-family: var(--fonte-corpo);
+    background: linear-gradient(160deg, #1a1a2e 0%, #2c2c54 100%);
+    min-height: 100vh;
+    color: var(--cor-texto);
+    padding: 40px 20px;
 }
 
-/* Container principal */
-#cabeçalho {
-    max-width: 800px;
-    margin: auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+#curriculo {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--cor-card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-/* Nome principal */
-#cabeçalho h1:first-child {
+
+.perfil {
+    background: var(--cor-primaria);
+    color: #ffffff;
+    padding: 40px 40px 32px;
     text-align: center;
-    font-size: 32px;
-    color: #2c2c54;
-    margin-bottom: 10px;
 }
 
-/* Informações básicas */
-#cabeçalho > h3 {
-    text-align: center;
-    font-weight: normal;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-/* Links */
-a {
-    text-decoration: none;
+.perfil h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
     color: #ffffff;
 }
 
-/* Botões (GitHub e Email) */
-nav ul {
+
+.info-lista {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 15px 0;
-    flex-wrap: wrap; 
+    gap: 6px 20px;
+    margin-bottom: 24px;
 }
 
-nav ul li {
-    list-style: none;
+.info-lista li {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-nav ul li a {
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.links a {
     display: inline-block;
-    background: #2c2c54;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-    white-space: nowrap; 
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 999px;
+    transition: background 0.2s, transform 0.15s;
 }
 
-nav ul li a:hover {
-    background: #40407a;
+.links a:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* Títulos das seções */
-#cabeçalho h1 {
-    margin-top: 30px;
-    margin-bottom: 10px;
+.secao {
+    padding: 32px 40px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.secao:last-child {
+    border-bottom: none;
+}
+
+.secao h2 {
+    font-family: var(--fonte-titulo);
     font-size: 22px;
-    color: #2c2c54;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-borda);
 }
 
-/* Conteúdo */
-p {
-    margin-bottom: 15px;
+
+article {
+    margin-bottom: 20px;
 }
 
-/* Texto dos conteúdos */
-p h3 {
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h3 {
     font-size: 15px;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #444;
+    font-weight: 500;
+    color: var(--cor-texto);
+    margin-bottom: 3px;
 }
 
-/* Listas de habilidades */
-#cabeçalho h3 {
-    margin-left: 10px;
+.periodo {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
 }
 
-/* Efeito hover leve nas habilidades */
-#cabeçalho h3:hover {
-    color: #2c2c54;
-    transition: 0.2s;
+article p:not(.periodo) {
+    font-size: 14px;
+    color: var(--cor-suave);
+    line-height: 1.6;
 }
 
-/* Responsividade */
+
+.secao-habilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.habilidades {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.habilidades li {
+    font-size: 14px;
+    color: var(--cor-suave);
+    padding-left: 14px;
+    position: relative;
+}
+
+.habilidades li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--cor-destaque);
+}
+
+/* ── IA arrumou pra mim ── */
 @media (max-width: 600px) {
-    #cabeçalho {
-        padding: 20px;
+    body {
+        padding: 20px 12px;
     }
 
-    #cabeçalho h1:first-child {
-        font-size: 26px;
+    .perfil {
+        padding: 30px 24px 24px;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    .perfil h1 {
+        font-size: 30px;
+    }
+
+    .secao {
+        padding: 24px;
+    }
+
+    .secao-habilidades {
+        grid-template-columns: 1fr;
     }
 }
