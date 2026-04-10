@@ -5,102 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Gums Info</title>
+    <title>Matheus Gums — Currículo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- óbviamente um cabeçalho -->
-    <header id="cabeçalho">
-        <h1>Matheus Gums</h1>
-        <h3>Nascimento: 11/07/2008</h3>
-        <h3>Telefone: +55 47 991713253</h3>
-        <h3>E-mail: gums386@gmail.com</h3>
-        <h3>Cidade: Brusque</h3>
-        <nav>
-            <ul>
-                <li>
-                    <a target="_blank" href="https://github.com/MatheusGums">
-                        <h3>Meu Github</h3>
-                    </a>
-                </li>
+
+    <main id="curriculo">
+
+        <!-- Cabeçalho / Identificação -->
+        <header class="perfil">
+            <h1>Matheus Gums</h1>
+            <ul class="info-lista">
+                <li>Nascimento: 11/07/2008</li>
+                <li>Telefone: +55 47 99171-3253</li>
+                <li>E-mail: gums386@gmail.com</li>
+                <li>Cidade: Brusque</li>
             </ul>
-        </nav>
+            <nav class="links">
+                <a href="https://github.com/MatheusGums" target="_blank">GitHub</a>
+                <a href="mailto:matheus.gums@unifebe.edu.br">Enviar e-mail</a>
+            </nav>
+        </header>
 
-        <nav>
-            <ul>
-                <li>
-                    <a target="_blank" href="mailto:matheus.gums@unifebe.edu.br"><h3>Envie um Email</h3></a>
-                </li>
-            </ul>
-        </nav>
+        <!-- Formação -->
+        <section class="secao">
+            <h2>Formação</h2>
 
-        <h1>Formação</h1>
-        <p>
-        <h3>Sistemas de Informação UNIFEBE: 2026/1
-            Principais conteúdos estudados até o momento: Html, Números Binários, Fundamentos da Matemática, Teoria
-            geral da administração
-        </h3>
-        </p>
+            <article>
+                <h3>Sistemas de Informação — UNIFEBE</h3>
+                <p class="periodo">2026/1 — Em andamento</p>
+                <p>Principais conteúdos estudados até o momento: HTML, Números Binários, Fundamentos da Matemática, Teoria Geral da Administração.</p>
+            </article>
 
-        <p>
-        <h3>Curso de Desenhista Mecânico Período: 2025/1 – 2025/2 Carga horária: 860 Horas
-            Principais conteúdos estudados: Projetos de Inovação, Desenho Técnico, Desenho Técnico
-            Auxiliado por Computador, Aprimoramento Profissional.
-        </h3>
-        </p>
-        <p>
-        <h3>Curso de Eletricista Industrial Período: 2024/1 – 2024/2 Carga horária: 860 Horas
-            Principais conteúdos estudados: Desenvolvimento Socioprofissional, Indústria 4.0, Eletricidade,
-            Automação, Sistemas Elétricos Industriais.
-        </h3>
-        </p>
-        <p>
-        <h3>Curso de Lógica de Programação Período: 2023/1 – 2023/2
-            Principais conteúdos estudados: Portugol Studio, Programação, Fluxograma, Lógica.
-        </h3>
-        </p>
-        <p>
-        <h3>Curso de Informática Básica Período: 2020/1 – 2020/2
-            Principais conteúdos estudados: Hardware e Software, Excel, Word, Powerpoint.
-        </h3>
-        </p>
-        <h1>Experiência Profissional</h1>
+            <article>
+                <h3>Curso de Desenhista Mecânico</h3>
+                <p class="periodo">2025/1 – 2025/2 · 860 horas</p>
+                <p>Projetos de Inovação, Desenho Técnico, Desenho Técnico Auxiliado por Computador, Aprimoramento Profissional.</p>
+            </article>
 
-        <p>
-        <h3>DAFE Tapetes. Período: Atuando
-            Função:Auxiliar Administrativo.
-        </h3>
-        </p>
+            <article>
+                <h3>Curso de Eletricista Industrial</h3>
+                <p class="periodo">2024/1 – 2024/2 · 860 horas</p>
+                <p>Desenvolvimento Socioprofissional, Indústria 4.0, Eletricidade, Automação, Sistemas Elétricos Industriais.</p>
+            </article>
 
-        <p>
-        <h3>SENAI Brusque. Período: 2025/1 – 2025/2
-            Principais atividades: Menor aprendiz de Desenhista Mecânico, Projetos de modelagem 3D e
-            práticas de aprimoramento profissional.
-        </h3>
-        </p>
+            <article>
+                <h3>Curso de Lógica de Programação</h3>
+                <p class="periodo">2023/1 – 2023/2</p>
+                <p>Portugol Studio, Programação, Fluxograma, Lógica.</p>
+            </article>
 
-        <p>
-        <h3>SENAI Brusque. Período:2024/1 – 2024/2.
-            Principais atividades: Menor aprendiz de Eletricista Industrial, Práticas de circuitos, Instalações
-            elétricas e projetos de automação.
-        </h3>
-        </p>
+            <article>
+                <h3>Curso de Informática Básica</h3>
+                <p class="periodo">2020/1 – 2020/2</p>
+                <p>Hardware e Software, Excel, Word, PowerPoint.</p>
+            </article>
+        </section>
 
-        <h1>Habilidades Técnicas</h1>
-        <h3>Lógica de programação.</h3>
-        <h3>Html & CSS Básico.</h3>
-        <h3>Inglês Avançado.</h3>
-        <h3>Pacote Office(Word, Powerpoint etc)</h3>
+        <!-- Experiência -->
+        <section class="secao">
+            <h2>Experiência Profissional</h2>
 
-        <h1>Habilidades Comportamentais</h1>
-        <h3>Análise Crítica.</h3>
-        <h3>Solução de Problemas.</h3>
-        <h3>Percepção de Detalhes.</h3>
-        <h3>Criatividade</h3>
+            <article>
+                <h3>DAFE Tapetes</h3>
+                <p class="periodo">Atualmente</p>
+                <p>Auxiliar Administrativo.</p>
+            </article>
 
-    </header>
+            <article>
+                <h3>SENAI Brusque — Desenhista Mecânico</h3>
+                <p class="periodo">2025/1 – 2025/2</p>
+                <p>Menor aprendiz: projetos de modelagem 3D e práticas de aprimoramento profissional.</p>
+            </article>
+
+            <article>
+                <h3>SENAI Brusque — Eletricista Industrial</h3>
+                <p class="periodo">2024/1 – 2024/2</p>
+                <p>Menor aprendiz: práticas de circuitos, instalações elétricas e projetos de automação.</p>
+            </article>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="secao secao-habilidades">
+            <div>
+                <h2>Habilidades Técnicas</h2>
+                <ul class="habilidades">
+                    <li>Lógica de programação</li>
+                    <li>HTML &amp; CSS básico</li>
+                    <li>Inglês avançado</li>
+                    <li>Pacote Office (Word, PowerPoint etc.)</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Habilidades Comportamentais</h2>
+                <ul class="habilidades">
+                    <li>Análise crítica</li>
+                    <li>Solução de problemas</li>
+                    <li>Percepção de detalhes</li>
+                    <li>Criatividade</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
 </body>
-
 </html>
